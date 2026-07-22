@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { messages, messagesMeta } from '../data/messages.js'
 import CoverFlow from '../components/CoverFlow.jsx'
+import { asset } from '../lib/asset.js'
 
 const SWATCHES = ['var(--s1)', 'var(--s2)', 'var(--s3)', 'var(--s4)', 'var(--s5)']
 
@@ -30,7 +31,7 @@ export default function Messages() {
     audio.pause()
     setTime(0)
     setDuration(0)
-    if (current?.audio) audio.src = current.audio
+    if (current?.audio) audio.src = asset(current.audio)
     else audio.removeAttribute('src')
     // scroll the message back to the top when the person changes
     if (bodyRef.current) bodyRef.current.scrollTop = 0
@@ -64,7 +65,7 @@ export default function Messages() {
             style={{ '--swatch': SWATCHES[messages.indexOf(m) % SWATCHES.length] }}
           >
             {m.photo ? (
-              <img src={m.photo} alt="" draggable="false" />
+              <img src={asset(m.photo)} alt="" draggable="false" />
             ) : (
               <span className="card__initial">{m.name.charAt(0)}</span>
             )}

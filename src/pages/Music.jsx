@@ -1,4 +1,5 @@
 import { playlist, tracks } from '../data/music.js'
+import { asset } from '../lib/asset.js'
 
 const SWATCHES = ['var(--s1)', 'var(--s2)', 'var(--s3)', 'var(--s4)', 'var(--s5)']
 
@@ -8,7 +9,7 @@ export default function Music() {
       <header className="pl">
         <div className="pl__cover">
           {playlist.cover ? (
-            <img src={playlist.cover} alt="" />
+            <img src={asset(playlist.cover)} alt="" />
           ) : (
             <span className="pl__coverph">
               <span className="pl__coverph-glyph">♫</span>
@@ -52,7 +53,7 @@ export default function Music() {
                   style={{ '--swatch': SWATCHES[i % SWATCHES.length] }}
                 >
                   {t.photo ? (
-                    <img src={t.photo} alt="" loading="lazy" />
+                    <img src={asset(t.photo)} alt="" loading="lazy" />
                   ) : (
                     t.name.charAt(0)
                   )}

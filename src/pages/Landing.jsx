@@ -1,22 +1,21 @@
 import { Link } from 'react-router-dom'
 import { landing } from '../data/landing.js'
 import { navLinks } from '../data/nav.js'
-import FitText from '../components/FitText.jsx'
-import FitStack from '../components/FitStack.jsx'
+import Wordmark from '../components/Wordmark.jsx'
 import useMediaQuery from '../hooks/useMediaQuery.js'
+import { asset } from '../lib/asset.js'
 
 export default function Landing() {
   // On a phone a one-line title is only ~34px tall, which reads as weak for a
   // hero. Stacking the words lets each one fill the screen instead.
   const stacked = useMediaQuery('(max-width: 700px)')
-  const words = landing.name.trim().split(/\s+/)
 
   if (landing.artwork) {
     return (
       <main className="landing landing--art">
         <img
           className="landing__art"
-          src={landing.artwork}
+          src={asset(landing.artwork)}
           alt={`${landing.greeting} ${landing.name}`}
           style={{ objectFit: landing.fit }}
         />
@@ -35,14 +34,7 @@ export default function Landing() {
         </p>
 
         <h1 className="display display--hero">
-          {stacked ? (
-            <FitStack words={words} className="display__fit" fill={0.9} />
-          ) : (
-            // 0.78 ≈ the title-to-frame width ratio in the design
-            <FitText className="display__fit" fill={0.78}>
-              {landing.name}
-            </FitText>
-          )}
+          <Wordmark variant={stacked ? 'stacked' : 'hero'} />
         </h1>
 
         <Nav />

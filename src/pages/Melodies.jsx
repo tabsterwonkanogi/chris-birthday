@@ -1,4 +1,5 @@
 import { melodies, melodiesMeta } from '../data/melodies.js'
+import { asset } from '../lib/asset.js'
 
 export default function Melodies() {
   return (
@@ -29,7 +30,7 @@ export default function Melodies() {
 
                 <span className="vinyl__sleeve">
                   {m.cover ? (
-                    <img src={m.cover} alt="" loading="lazy" />
+                    <img src={asset(m.cover)} alt="" loading="lazy" />
                   ) : (
                     <span className="vinyl__ph">
                       <span className="vinyl__ph-mark">♫</span>

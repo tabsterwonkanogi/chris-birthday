@@ -7,7 +7,7 @@ import { useCallback, useLayoutEffect, useRef } from 'react'
 // Size is written straight to the DOM rather than kept in React state: probing
 // needs a temporary font-size, and if the computed value matched the existing
 // state React would skip the re-render and leave the probe size stuck.
-export default function FitStack({ words, className = '', fill = 0.9, max = 260 }) {
+export default function FitStack({ words, className = '', fill = 0.9, max = 260, separator = null }) {
   const boxRef = useRef(null)
   const refs = useRef([])
 
@@ -47,11 +47,15 @@ export default function FitStack({ words, className = '', fill = 0.9, max = 260 
   return (
     <div ref={boxRef} className="fit">
       {words.map((w, i) => (
-        // the row wrapper is what puts each word on its own line — the measured
-        // span itself must stay inline-block so scrollWidth reports text width
-        <span className="fit__row" key={`${w}-${i}`}>
-          <span ref={(el) => (refs.current[i] = el)} className={className}>
-            {w}
+        <span key={`${w}-${i}`}>
+          {/* an optional node between the rows — e.g. the logo face */}
+          {separator && i > 0 && <span className="fit__sep">{separator}</span>}
+          {/* the row wrapper is what puts each word on its own line — the measured
+              span itself must stay inline-block so scrollWidth reports text width */}
+          <span className="fit__row">
+            <span ref={(el) => (refs.current[i] = el)} className={className}>
+              {w}
+            </span>
           </span>
         </span>
       ))}

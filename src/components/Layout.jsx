@@ -1,6 +1,6 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { navLinks } from '../data/nav.js'
-import { landing } from '../data/landing.js'
+import Wordmark from './Wordmark.jsx'
 
 export default function Layout() {
   const { pathname } = useLocation()
@@ -11,8 +11,8 @@ export default function Layout() {
       {/* the landing page carries its own nav inside the hero */}
       {!isLanding && (
         <header className="topbar">
-          <Link to="/" className="topbar__home">
-            {landing.name}
+          <Link to="/" className="topbar__home" aria-label="Home">
+            <Wordmark variant="bar" />
           </Link>
           <nav className="hnav">
             {navLinks.map((l) => (

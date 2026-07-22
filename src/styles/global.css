@@ -264,6 +264,48 @@ code {
   display: block;
 }
 
+.fit__sep {
+  display: block;
+  text-align: center;
+}
+
+/* ── the "Chrissy [face] Wissy" wordmark ──────────────────────────────────
+   The cutout of Chris sits between the two words wherever the logo appears. */
+
+/* one-line hero: inline, sized in em so it scales with the fitted type.
+   aspect-ratio reserves the right width BEFORE the image loads — otherwise
+   FitText measures a zero-width face and the words overlap it. */
+.wm__face--hero {
+  display: inline-block;
+  height: 0.82em;
+  width: auto;
+  aspect-ratio: 788 / 816;
+  margin: 0 0.1em;
+  vertical-align: -0.14em; /* drop it so the head sits on the baseline row */
+}
+
+/* stacked phone hero: its own row between the two words */
+.wm__face--stacked {
+  display: block;
+  height: min(30vw, 190px);
+  width: auto;
+  aspect-ratio: 788 / 816;
+  margin: 2px auto;
+}
+
+/* top bar: fixed small mark next to the two words */
+.wm--bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wm__face--bar {
+  height: 1.5em;
+  width: auto;
+  margin-bottom: -0.35em; /* let the head rise a touch above the caps */
+}
+
 /* Stacked words on a phone sit tight, like one block of type. line-height:0 on
    the box (not a negative em margin — the box's font-size is 0, so `em` there
    would resolve to nothing) drops the strut's half-leading between lines. */

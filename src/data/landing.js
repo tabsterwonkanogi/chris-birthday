@@ -14,4 +14,8 @@ export const landing = {
   greeting: 'happy 19th birthday to',
   handle: 'user020807', // the orange italic bit
   name: 'Chrissy Wissy', // rendered in caps
+
+  // The cutout that sits between the two words of the logo, everywhere the
+  // "Chrissy Wissy" wordmark appears. Set to null to remove it.
+  logoFace: '/photos/chris.png',
 }

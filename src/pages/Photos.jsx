@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { photos } from '../data/photos.js'
+import { asset } from '../lib/asset.js'
 
 export default function Photos() {
   const filled = photos.filter((p) => p.src)
@@ -69,7 +70,7 @@ export default function Photos() {
             >
               {p.src ? (
                 <button className="shot__hit" onClick={() => setOpen(idx)}>
-                  <img src={p.src} alt={p.caption || ''} loading="lazy" />
+                  <img src={asset(p.src)} alt={p.caption || ''} loading="lazy" />
                 </button>
               ) : (
                 <div className="shot__placeholder" />
@@ -104,7 +105,7 @@ export default function Photos() {
             ‹
           </button>
           <figure className="lightbox__figure" onClick={(e) => e.stopPropagation()}>
-            <img src={filled[open].src} alt={filled[open].caption || ''} />
+            <img src={asset(filled[open].src)} alt={filled[open].caption || ''} />
             {filled[open].caption && <figcaption>{filled[open].caption}</figcaption>}
           </figure>
           <button
