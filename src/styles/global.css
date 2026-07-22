@@ -279,7 +279,7 @@ code {
   display: inline-block;
   height: 0.82em;
   width: auto;
-  aspect-ratio: 788 / 816;
+  aspect-ratio: 528 / 497;
   margin: 0 0.1em;
   vertical-align: -0.14em; /* drop it so the head sits on the baseline row */
 }
@@ -289,7 +289,7 @@ code {
   display: block;
   height: min(30vw, 190px);
   width: auto;
-  aspect-ratio: 788 / 816;
+  aspect-ratio: 528 / 497;
   margin: 2px auto;
 }
 
