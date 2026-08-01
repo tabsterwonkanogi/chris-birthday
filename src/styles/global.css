@@ -20,6 +20,8 @@
   --s5: #d99a5c;
 
   --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* handwriting for the birthday messages — swap this one line to change it */
+  --font-hand: 'Caveat', 'Segoe Script', cursive;
   /* Swap this one line to change every display heading on the site.
      Both faces are installed:
        'Bodoni Moda'      — very high contrast, wider, classical
@@ -530,8 +532,12 @@ code {
 
 .msg__text {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.85;
+  font-family: var(--font-hand);
+  /* handwriting faces render small + fine, so size up and loosen the spacing
+     to keep a full message readable on a phone */
+  font-size: clamp(23px, 5.5vw, 28px);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
   color: var(--cream);
   white-space: pre-wrap; /* keeps the line breaks people write */
 }

@@ -7,6 +7,8 @@ import '@fontsource/instrument-serif/400-italic.css'
 import '@fontsource/space-mono/400.css'
 import '@fontsource/space-mono/400-italic.css'
 import '@fontsource/space-mono/700.css'
+import '@fontsource/caveat/400.css'
+import '@fontsource/caveat/600.css'
 import './styles/global.css'
 import App from './App.jsx'
 
