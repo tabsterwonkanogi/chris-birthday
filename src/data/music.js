@@ -13,7 +13,7 @@ export const playlist = {
   // the \n forces the second sentence onto its own row (see .pl__desc pre-line)
   description: 'The songs your friends want to play for you.\nTap one to open it in Spotify.',
   curator: 'made for chris',
-  cover: null, // "/design/playlist.png" — placeholder square until you add one
+  cover: '/photos/jam-cover.jpg',
   playlistUrl: null,
 }
 
