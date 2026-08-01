@@ -23,6 +23,7 @@ export default function Messages() {
   const current = messages[active]
   const hasAudio = Boolean(current?.audio)
   const hasText = Boolean(current?.text)
+  const hasImage = Boolean(current?.image)
 
   const seek = useCallback((seconds) => {
     const audio = audioRef.current
@@ -151,6 +152,16 @@ export default function Messages() {
             <p className="msg__text">{current.text}</p>
             <p className="msg__from">from {current.name}</p>
           </>
+        ) : hasImage ? (
+          <a
+            className="msg__card"
+            href={asset(current.image)}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src={asset(current.image)} alt={`Handwritten card from ${current.name}`} />
+            <span className="msg__card-hint">tap to open {current.name}'s card</span>
+          </a>
         ) : (
           <p className="msg__voice">
             {current?.name} recorded you a voice message. Press play.

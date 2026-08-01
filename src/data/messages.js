@@ -66,9 +66,11 @@ since the first time I've met you in JC1, you have truly become one of my closes
     id: 'joshua',
     name: 'Joshua',
     relation: '',
-    photo: null,
+    photo: '/photos/joshua.jpg',
     audio: '/audio/joshua.m4a',
     text: '',
+    // a scanned handwritten card, shown below the audio bar (tap to open full)
+    image: '/photos/joshua-card.jpg',
   },
   {
     id: 'hanyin',

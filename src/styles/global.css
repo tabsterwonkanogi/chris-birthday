@@ -246,11 +246,11 @@ code {
   min-width: 0;
 }
 
-/* the intro video — first thing on the landing, above the wordmark */
+/* the intro video — sits below the nav on the landing */
 .intro {
   width: 100%;
   max-width: 540px;
-  margin: 0 auto 40px;
+  margin: 48px auto 0;
 }
 
 .intro__video {
@@ -559,6 +559,31 @@ code {
   margin: 0;
   opacity: 0;
   cursor: pointer;
+}
+
+/* a scanned handwritten card shown below the audio bar (tap to open full) */
+.msg__card {
+  display: block;
+  text-decoration: none;
+}
+
+.msg__card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.msg__card-hint {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
 }
 
 /* the prompt shown for a voice-only person (no written text) */
@@ -1159,6 +1184,7 @@ code {
   font-size: 12.5px;
   line-height: 1.7;
   color: var(--cream-dim);
+  white-space: pre-line; /* honour the \n between the two sentences */
 }
 
 .pl__meta {

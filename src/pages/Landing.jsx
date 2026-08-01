@@ -31,6 +31,16 @@ export default function Landing() {
   return (
     <main className="landing">
       <div className="landing__inner">
+        <p className="kicker">
+          {landing.greeting} {landing.handle && <em>{landing.handle}</em>}
+        </p>
+
+        <h1 className="display display--hero">
+          <Wordmark variant={stacked ? 'stacked' : 'hero'} />
+        </h1>
+
+        <Nav />
+
         {intro?.video && (
           <figure className="intro">
             <video
@@ -44,16 +54,6 @@ export default function Landing() {
             {intro.hint && <figcaption className="intro__hint">{intro.hint}</figcaption>}
           </figure>
         )}
-
-        <p className="kicker">
-          {landing.greeting} {landing.handle && <em>{landing.handle}</em>}
-        </p>
-
-        <h1 className="display display--hero">
-          <Wordmark variant={stacked ? 'stacked' : 'hero'} />
-        </h1>
-
-        <Nav />
       </div>
     </main>
   )

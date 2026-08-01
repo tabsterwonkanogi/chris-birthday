@@ -10,7 +10,8 @@
 
 export const playlist = {
   title: 'Jam with Friends!',
-  description: 'The songs your friends want to play for you. Tap one to open it in Spotify.',
+  // the \n forces the second sentence onto its own row (see .pl__desc pre-line)
+  description: 'The songs your friends want to play for you.\nTap one to open it in Spotify.',
   curator: 'made for chris',
   cover: null, // "/design/playlist.png" — placeholder square until you add one
   playlistUrl: null,
@@ -39,7 +40,7 @@ export const tracks = [
     name: 'Joshua',
     song: 'リンダ リンダ',
     artist: 'パ-ランマウム',
-    photo: null,
+    photo: '/photos/joshua.jpg',
     link: 'https://open.spotify.com/track/5xO0ynhnuVy9dLLOTAabac',
   },
 ]
