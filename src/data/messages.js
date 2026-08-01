@@ -5,6 +5,10 @@
 //          If present, the play button in the bar plays it.
 // `photo`  OPTIONAL card image in public/photos/ → "/photos/name.jpg".
 //          Leave null and the card shows their initial on a colour.
+// `video`  OPTIONAL video message in public/video/ → "/video/name.mp4". Shown
+//          below the bar with its own controls (for people who filmed instead
+//          of writing/recording).
+// `image`  OPTIONAL scanned card image in public/photos/, shown below the bar.
 // `focus`  OPTIONAL crop anchor for the square card — 'right', 'left', 'top',
 //          etc. Use when the person sits off to one side of a wide photo.
 //
@@ -92,6 +96,9 @@ When we dont meet don't Simpson Bart`,
     audio: '/audio/tzwei.m4a',
     text: '',
   },
+  // Poh Yang goes here once his video is in the folder — his entry will be:
+  //   { id: 'pohyang', name: 'Poh Yang', relation: '', photo: null,
+  //     audio: null, text: '', video: '/video/pohyang.mp4' },
 ]
 
 // The line under the cards, like the caption in your reference.

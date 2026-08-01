@@ -561,6 +561,19 @@ code {
   cursor: pointer;
 }
 
+/* a video message shown below the bar */
+.msg__video {
+  margin: 0;
+}
+
+.msg__video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border: 1px solid var(--line);
+}
+
 /* a scanned handwritten card shown below the audio bar (tap to open full) */
 .msg__card {
   display: block;

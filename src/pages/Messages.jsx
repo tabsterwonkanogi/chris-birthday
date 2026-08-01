@@ -24,6 +24,7 @@ export default function Messages() {
   const hasAudio = Boolean(current?.audio)
   const hasText = Boolean(current?.text)
   const hasImage = Boolean(current?.image)
+  const hasVideo = Boolean(current?.video)
 
   const seek = useCallback((seconds) => {
     const audio = audioRef.current
@@ -152,6 +153,17 @@ export default function Messages() {
             <p className="msg__text">{current.text}</p>
             <p className="msg__from">from {current.name}</p>
           </>
+        ) : hasVideo ? (
+          <figure className="msg__video">
+            <video
+              src={asset(current.video)}
+              poster={current.poster ? asset(current.poster) : undefined}
+              controls
+              playsInline
+              preload="metadata"
+            />
+            <figcaption className="msg__card-hint">press play {current.name}'s video</figcaption>
+          </figure>
         ) : hasImage ? (
           <a
             className="msg__card"
@@ -162,11 +174,11 @@ export default function Messages() {
             <img src={asset(current.image)} alt={`Handwritten card from ${current.name}`} />
             <span className="msg__card-hint">tap to open {current.name}'s card</span>
           </a>
-        ) : (
+        ) : hasAudio ? (
           <p className="msg__voice">
             {current?.name} recorded you a voice message. Press play.
           </p>
-        )}
+        ) : null}
       </article>
 
       <audio
