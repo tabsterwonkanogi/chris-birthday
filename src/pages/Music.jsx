@@ -53,7 +53,12 @@ export default function Music() {
                   style={{ '--swatch': SWATCHES[i % SWATCHES.length] }}
                 >
                   {t.photo ? (
-                    <img src={asset(t.photo)} alt="" loading="lazy" />
+                    <img
+                      src={asset(t.photo)}
+                      alt=""
+                      loading="lazy"
+                      style={t.focus ? { objectPosition: t.focus } : undefined}
+                    />
                   ) : (
                     t.name.charAt(0)
                   )}

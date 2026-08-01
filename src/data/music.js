@@ -1,47 +1,45 @@
-// THE MUSIC PAGE — a playlist where every "song" is a person.
+// THE MUSIC PAGE — songs your friends want to jam to with you.
 //
-// Their photo is the album art, their name is the track title, and the song
-// they recommended is the artist line.
+// Each row: the friend's photo is the album art, their name is the track title,
+// and the song they picked is the artist line. Tapping a row opens the song in
+// Spotify.
 //
-// `photo` drop the person's picture into public/photos/ → "/photos/tabby.jpg"
-//         Leave null and they get their initial on a colour instead.
-// `link`  OPTIONAL. A Spotify / YouTube / Apple Music URL for the song they
-//         picked. If set, tapping the row opens it. If not, the row is inert.
+// `photo` friend's picture in public/photos/ → "/photos/name.jpg" (or null → initial)
+// `focus` OPTIONAL crop anchor for the little square art ('right', 'left', ...)
+// `link`  the Spotify (or YouTube / Apple Music) URL for their song.
 
 export const playlist = {
-  title: 'Your All-Time Top Friends',
-  // The description line under the title.
-  description:
-    '# your all-time top friends ! to the ones who picked a song for you, and the ones who have been on repeat since day one',
+  title: 'Jam with Friends!',
+  description: 'the songs your friends want to play for you — tap one to open it in Spotify',
   curator: 'made for chris',
   cover: null, // "/design/playlist.png" — placeholder square until you add one
-  // OPTIONAL. A real playlist of everyone's picks — the big button opens it.
   playlistUrl: null,
 }
 
 export const tracks = [
   {
-    id: 't1',
-    name: 'Tabby',
-    song: 'Inside Out',
-    artist: 'Keshi',
-    photo: null,
-    link: null,
+    id: 'tzwei',
+    name: 'Tzwei',
+    song: 'All They Wanted',
+    artist: 'Panchiko',
+    photo: '/photos/tzwei.jpg',
+    focus: 'right',
+    link: 'https://open.spotify.com/track/28Ymf40EoJ6776juQZNPoY',
   },
   {
-    id: 't2',
-    name: 'Another friend',
-    song: 'The Shade',
-    artist: 'Rex Orange County',
-    photo: null,
-    link: null,
+    id: 'jj',
+    name: 'JJ',
+    song: 'Crashing In (Spontaneous)',
+    artist: 'Cory Asbury',
+    photo: '/photos/jj.jpg',
+    link: 'https://open.spotify.com/track/1QFq1ncI1KH72GqXk5RyK9',
   },
   {
-    id: 't3',
-    name: 'Someone else',
-    song: 'Evergreen',
-    artist: 'Richy Mitch & The Coal Miners',
+    id: 'joshua',
+    name: 'Joshua',
+    song: 'リンダ リンダ',
+    artist: 'パ-ランマウム',
     photo: null,
-    link: null,
+    link: 'https://open.spotify.com/track/5xO0ynhnuVy9dLLOTAabac',
   },
 ]
