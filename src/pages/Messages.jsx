@@ -71,7 +71,12 @@ export default function Messages() {
             style={{ '--swatch': SWATCHES[messages.indexOf(m) % SWATCHES.length] }}
           >
             {m.photo ? (
-              <img src={asset(m.photo)} alt="" draggable="false" />
+              <img
+                src={asset(m.photo)}
+                alt=""
+                draggable="false"
+                style={m.focus ? { objectPosition: m.focus } : undefined}
+              />
             ) : (
               <span className="card__initial">{m.name.charAt(0)}</span>
             )}
