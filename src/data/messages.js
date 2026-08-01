@@ -96,9 +96,16 @@ When we dont meet don't Simpson Bart`,
     audio: '/audio/tzwei.m4a',
     text: '',
   },
-  // Poh Yang goes here once his video is in the folder — his entry will be:
-  //   { id: 'pohyang', name: 'Poh Yang', relation: '', photo: null,
-  //     audio: null, text: '', video: '/video/pohyang.mp4' },
+  {
+    id: 'pohyang',
+    name: 'Poh Yang',
+    relation: '',
+    photo: null,
+    audio: null,
+    text: '',
+    video: '/video/pohyang.mp4',
+    poster: '/video/pohyang-poster.jpg',
+  },
 ]
 
 // The line under the cards, like the caption in your reference.
