@@ -1,16 +1,40 @@
-// ONE ENTRY PER PHOTO.
-//
-// 1. Drop the image into  public/photos/
-// 2. Add an object below. `src` is the path from public/ — e.g. "/photos/beach.jpg"
-// 3. `caption` is optional but makes the page much better.
-// 4. `span` controls the size in the mosaic:
-//      'wide' = 2 columns, 'tall' = 2 rows, 'big' = 2x2, omit = normal
+// ONE ENTRY PER PHOTO. Drop images in public/photos/ and list them here.
+// `span`: 'wide' = 2 cols, 'tall' = 2 rows, 'big' = 2x2, omit = normal.
+// `caption` is optional. Reorder freely — order here = order on the page.
 
 export const photos = [
-  { id: 'p1', src: null, caption: 'Add your first photo', span: 'big' },
-  { id: 'p2', src: null, caption: '', span: null },
-  { id: 'p3', src: null, caption: '', span: 'tall' },
-  { id: 'p4', src: null, caption: '', span: null },
-  { id: 'p5', src: null, caption: '', span: 'wide' },
-  { id: 'p6', src: null, caption: '', span: null },
+  { src: '/photos/mem01.jpg', caption: '', span: 'big' },
+  { src: '/photos/mem02.jpg', caption: '', span: null },
+  { src: '/photos/mem03.jpg', caption: '', span: null },
+  { src: '/photos/mem04.jpg', caption: '', span: null },
+  { src: '/photos/mem05.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem06.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem07.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem08.jpg', caption: '', span: null },
+  { src: '/photos/mem09.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem10.jpg', caption: '', span: null },
+  { src: '/photos/mem11.jpg', caption: '', span: null },
+  { src: '/photos/mem12.jpg', caption: '', span: null },
+  { src: '/photos/mem13.jpg', caption: '', span: 'wide' },
+  { src: '/photos/mem14.jpg', caption: '', span: null },
+  { src: '/photos/mem15.jpg', caption: '', span: 'wide' },
+  { src: '/photos/mem16.jpg', caption: '', span: null },
+  { src: '/photos/mem17.jpg', caption: '', span: null },
+  { src: '/photos/mem18.jpg', caption: '', span: 'wide' },
+  { src: '/photos/mem19.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem20.jpg', caption: '', span: null },
+  { src: '/photos/mem21.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem22.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem23.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem24.jpg', caption: '', span: null },
+  { src: '/photos/mem25.jpg', caption: '', span: null },
+  { src: '/photos/mem26.jpg', caption: '', span: null },
+  { src: '/photos/mem27.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem28.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem29.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem30.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem31.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem32.jpg', caption: '', span: null },
+  { src: '/photos/mem33.jpg', caption: '', span: 'tall' },
+  { src: '/photos/mem34.jpg', caption: '', span: 'wide' },
 ]

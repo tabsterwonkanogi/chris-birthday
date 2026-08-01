@@ -61,11 +61,11 @@ export default function Photos() {
       )}
 
       <div className="mosaic">
-        {photos.map((p) => {
+        {photos.map((p, i) => {
           const idx = filled.indexOf(p)
           return (
             <figure
-              key={p.id}
+              key={p.src || i}
               className={'shot' + (p.span ? ` shot--${p.span}` : '') + (p.src ? '' : ' is-empty')}
             >
               {p.src ? (
