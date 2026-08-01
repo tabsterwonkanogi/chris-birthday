@@ -22,6 +22,12 @@ export default function Messages() {
 
   const current = messages[active]
   const hasAudio = Boolean(current?.audio)
+  const hasText = Boolean(current?.text)
+
+  const seek = useCallback((seconds) => {
+    const audio = audioRef.current
+    if (audio && isFinite(seconds)) audio.currentTime = seconds
+  }, [])
 
   // Moving to another person stops whatever was playing — otherwise you'd be
   // reading one message while hearing another.
@@ -111,10 +117,40 @@ export default function Messages() {
         </span>
       </div>
 
+      {/* seek bar — only for voice messages, and some run several minutes */}
+      {hasAudio && (
+        <div className="mseek">
+          <div className="mseek__track">
+            <div
+              className="mseek__fill"
+              style={{ width: duration ? `${(time / duration) * 100}%` : 0 }}
+            />
+            <input
+              className="mseek__input"
+              type="range"
+              min={0}
+              max={duration || 0}
+              step={0.1}
+              value={time}
+              onChange={(e) => seek(Number(e.target.value))}
+              aria-label="Seek within the voice message"
+            />
+          </div>
+        </div>
+      )}
+
       {/* the message itself, below the bar */}
       <article className="msg" ref={bodyRef} key={current?.id}>
-        <p className="msg__text">{current?.text}</p>
-        <p className="msg__from">— {current?.name}</p>
+        {hasText ? (
+          <>
+            <p className="msg__text">{current.text}</p>
+            <p className="msg__from">— {current.name}</p>
+          </>
+        ) : (
+          <p className="msg__voice">
+            {current?.name} recorded you a voice message — press play
+          </p>
+        )}
       </article>
 
       <audio
