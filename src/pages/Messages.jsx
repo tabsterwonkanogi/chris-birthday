@@ -149,11 +149,11 @@ export default function Messages() {
         {hasText ? (
           <>
             <p className="msg__text">{current.text}</p>
-            <p className="msg__from">— {current.name}</p>
+            <p className="msg__from">from {current.name}</p>
           </>
         ) : (
           <p className="msg__voice">
-            {current?.name} recorded you a voice message — press play
+            {current?.name} recorded you a voice message. Press play.
           </p>
         )}
       </article>

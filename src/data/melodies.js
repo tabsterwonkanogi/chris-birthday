@@ -1,33 +1,32 @@
 // MELODIES — a wall of covers. Tap one and it opens a real Spotify playlist.
 //
-// `cover` the artwork. Drop it into public/photos/ → "/photos/mix-a.jpg"
-//         Square images work best. Leave null for a placeholder sleeve.
+// `cover` the artwork in public/photos/ → "/photos/mix-a.jpg". Square images
+//         work best. Leave null for a placeholder sleeve.
 // `url`   the Spotify (or Apple / YouTube) playlist link. While it's null the
 //         card shows as "link coming" and isn't clickable — no dead links.
 // `disc`  OPTIONAL colour of the record peeking out behind the sleeve.
-//         Any CSS colour. Defaults to the orange accent.
 
 export const melodies = [
   {
     id: 'm1',
-    title: 'Playlist one',
-    subtitle: 'songs for the drive',
+    title: 'Playlist by Tzewei',
+    subtitle: '',
     cover: null,
-    url: null,
+    url: 'https://open.spotify.com/playlist/7wj5R0qRnt8QF4hFqKHR9n',
     disc: '#e2622e',
   },
   {
     id: 'm2',
-    title: 'Playlist two',
-    subtitle: 'the sad ones',
+    title: 'Playlist by Dylan',
+    subtitle: '',
     cover: null,
-    url: null,
+    url: 'https://open.spotify.com/playlist/2S9wGxxC8IOIThD5cKaNpw',
     disc: '#9aa87b',
   },
   {
     id: 'm3',
     title: 'Playlist three',
-    subtitle: 'loud, for the gym',
+    subtitle: '',
     cover: null,
     url: null,
     disc: '#d99a5c',
@@ -35,7 +34,7 @@ export const melodies = [
   {
     id: 'm4',
     title: 'Playlist four',
-    subtitle: 'we listened to this all summer',
+    subtitle: '',
     cover: null,
     url: null,
     disc: '#c44a2b',
@@ -43,5 +42,5 @@ export const melodies = [
 ]
 
 export const melodiesMeta = {
-  intro: 'playlists we made you — tap a cover to open it in Spotify',
+  intro: 'Playlists made for you. Tap a cover to open it in Spotify.',
 }

@@ -26,9 +26,25 @@ export default function Landing() {
     )
   }
 
+  const intro = landing.intro
+
   return (
     <main className="landing">
       <div className="landing__inner">
+        {intro?.video && (
+          <figure className="intro">
+            <video
+              className="intro__video"
+              src={asset(intro.video)}
+              poster={intro.poster ? asset(intro.poster) : undefined}
+              controls
+              playsInline
+              preload="metadata"
+            />
+            {intro.hint && <figcaption className="intro__hint">{intro.hint}</figcaption>}
+          </figure>
+        )}
+
         <p className="kicker">
           {landing.greeting} {landing.handle && <em>{landing.handle}</em>}
         </p>

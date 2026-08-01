@@ -94,5 +94,5 @@ When we dont meet don't Simpson Bart`,
 
 // The line under the cards, like the caption in your reference.
 export const messagesMeta = {
-  caption: 'swipe through — everyone left you a message',
+  caption: 'Swipe through to read what everyone left you.',
 }

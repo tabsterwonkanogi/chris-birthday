@@ -10,7 +10,7 @@
 
 export const playlist = {
   title: 'Jam with Friends!',
-  description: 'the songs your friends want to play for you — tap one to open it in Spotify',
+  description: 'The songs your friends want to play for you. Tap one to open it in Spotify.',
   curator: 'made for chris',
   cover: null, // "/design/playlist.png" — placeholder square until you add one
   playlistUrl: null,

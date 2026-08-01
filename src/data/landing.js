@@ -18,4 +18,13 @@ export const landing = {
   // The cutout that sits between the two words of the logo, everywhere the
   // "Chrissy Wissy" wordmark appears. Set to null to remove it.
   logoFace: '/photos/chris.png',
+
+  // The intro video — the first thing on the page, above the wordmark. It only
+  // downloads when Chris presses play (the poster frame shows until then).
+  // Set video to null to remove it.
+  intro: {
+    video: '/video/intro.mp4',
+    poster: '/video/intro-poster.jpg',
+    hint: 'press play',
+  },
 }

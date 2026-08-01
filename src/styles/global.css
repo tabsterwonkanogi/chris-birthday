@@ -246,6 +246,30 @@ code {
   min-width: 0;
 }
 
+/* the intro video — first thing on the landing, above the wordmark */
+.intro {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto 40px;
+}
+
+.intro__video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border: 1px solid var(--line);
+}
+
+.intro__hint {
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+}
+
 .display--hero {
   font-size: 0; /* the span carries the real size */
   line-height: 1;
