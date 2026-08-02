@@ -106,6 +106,15 @@ When we dont meet don't Simpson Bart`,
     video: '/video/pohyang.mp4',
     poster: '/video/pohyang-poster.jpg',
   },
+  {
+    id: 'zofeya',
+    name: 'Zofeya',
+    relation: '',
+    photo: '/photos/zofeya.jpg',
+    audio: '/audio/zofeya.m4a',
+    text: `hey chris! blessed 19th birthday! thanks for being really such a wonderful friend! its kinda funny how we hated each other idk 10 years ago for God knows what reason… but thankfully, somehow, we are friends now! even though the past 2? years haven't been the easiest i hope that God may reveal His plans for you some day, so do not lose heart! i am really thankful to God for blessing all of us, 07s, with you! thank you for always trying to include everyone and checking in to make sure we go for service. your humour oso always livens up the mood in our conversations, your presence really makes a difference! though youre not the most punctual person, thank you for being there to offer a listening ear when i needed it alot, and also for being there to celebrate joys in life! i think God gave you a gift to have so much heart for people around you, so continue to steward it well!! i really hope to see you in church more often!
+once again blessed 19th birthday chris!`,
+  },
 ]
 
 // The line under the cards, like the caption in your reference.
