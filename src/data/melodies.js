@@ -33,10 +33,10 @@ export const melodies = [
   },
   {
     id: 'm4',
-    title: 'Playlist four',
+    title: 'Playlist by Beatrice',
     subtitle: '',
     cover: null,
-    url: null,
+    url: 'https://open.spotify.com/playlist/1yF6ULaTuzh8fn2k51adG5',
     disc: '#c44a2b',
   },
 ]
