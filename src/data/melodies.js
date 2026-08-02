@@ -25,10 +25,10 @@ export const melodies = [
   },
   {
     id: 'm3',
-    title: 'Playlist three',
+    title: 'Playlist by JJ',
     subtitle: '',
     cover: null,
-    url: null,
+    url: 'https://open.spotify.com/playlist/4XxZPIGjUOTWxKetJGbpOq',
     disc: '#d99a5c',
   },
   {
